@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&family=Poppins:wght@400;500;700&family=Work+Sans:wght@400;700&display=swap');
+
+:root {
+    --pink: #E02C6D;
+    --blue: #0A0826;
+    --black: #3A3A3A;
+    --light-black: #18191F;
+    --black-gray: #6C6C6C;
+    --dark-gray: #5E6366;
+    --gray: #787885;
+    --primary-font: 'Poppins', sans-serif;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font)
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 24px;
+}
+
+.btn-primary {
+    background-color: var(--pink);
+    border: none;
+}
+
+.btn-primary>i,
+.btn-secondery>i {
+    padding-left: 5px;
+
+}
+
+.btn-secondery {
+    /* background-color: white; */
+    background-color: rgba(100%, 100%, 100%, 0.0);
+    border: none;
+
+    color: var(--pink);
+}
+
+/*-----------------------
+--------- nav style---------
+-----------------------  */
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 87px;
+}
+
+.nav-menu>ul {
+    display: flex;
+    list-style: none;
+    gap: 34px;
+    font-weight: 600;
+}
+
+/*--------------------------------
+------------- banner styles------------
+--------------------------------- */
+
+.banner {
+    display: flex;
+    margin-top: 50px;
+    column-gap: 133px;
+}
+
+.banner-container {
+    padding-top: 112px;
+}
+
+.banner-title {
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 16px;
+    line-height: 70px;
+}
+
+.banner-description {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.banner-button {
+    color: white;
+    border-radius: 41px;
+}
+
+.banner-image {
+    position: relative;
+}
+
+.camera {
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.sponsor {
+
+    margin-top: 70px;
+}
+
+.sponsor-logo {
+    display: flex;
+    max-width: 1110px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 36px;
+    border-top: 2px solid #E5EAF0;
+    border-bottom: 2px solid #E5EAF0;
+
+}
+
+
+/* ----------------------------------------
+---------collection section styles----------
+------------------------------------------ */
+.collections {
+    max-width: 1050px;
+    margin-bottom: 100px;
+}
+
+.collections-title {
+    color: var(--black);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.collections-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.collection {
+    padding: 17px 14px;
+
+    box-shadow: -25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+        0px -25px 20px -20px rgba(0, 0, 0, 0.45),
+        25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+        0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+
+.collection>img {
+    /* width: 300px; */
+}
+
+.collection-title {
+    color: var(--light-black);
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.collection-price {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #AEAEAE;
+    /* opacity: 0.25; */
+}
+
+.collection-description,
+.ratings>span {
+    color: var(--dark-gray);
+    font-size: .875rem;
+    font-weight: 700;
+}
+
+.collection-description {
+    color: var(--gray);
+}
+
+.see-more-button {
+    text-align: end;
+    margin-top: 45px;
+}
+
+
+/* ----------------------------------------
+-----------------features styles-------------
+------------------------------------------- */
+.features {
+    display: flex;
+    column-gap: 96px;
+    margin-bottom: 100px;
+}
+
+.feature-title {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 38px;
+    padding-top: 24px;
+}
+.feature-description{
+    color: var(--black-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 16px 0;
+}
+.feature-button {
+    color: white;
+}
+
+/*--------------------------------------------- 
+-----------styles for media- query---------------
+----------------------------------------------- */
+
+@media only screen and (max-width: 576px) {
+    .container{
+        max-width: 330px;
+    }
+    .nav-bar{
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .nav-menu>ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-container {
+        text-align: center;
+    }
+    .banner-title{
+        text-align: center;
+    }
+    .banner-description{
+        padding: 0 18px;
+    }
+    .banner-image > img{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* sponor logo styles  */
+    .sponsor-logo{
+        gap: 10px;
+        max-width: 280px;
+        /* justify-content: space-around; */
+    }
+    .collections-title {
+        text-align: center;
+    }
+    .collections-container{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    /* features styles  */
+    .features{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .feature-image > img{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .feature-button{
+        margin-bottom: 30px;
+    }
+}
